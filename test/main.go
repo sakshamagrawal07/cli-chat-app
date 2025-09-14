@@ -13,7 +13,7 @@ func main() {
 	defer db.Close()
 	messages, err := db.ReadMessages(channel)
 	if err != nil {
-		log.Fatalf("Error reading messages: %v", err)
+		log.Fatalf("Error reading messages during test: %v", err)
 	}
 
 	for _, msg := range messages {
